@@ -21,25 +21,26 @@
     <%= form.text_field :cooking_time %>
   </div>
 
-  <div class="field">
+  <div class="form-group"> <!--accessing the array values from the model-->
     <%= form.label :difficulty_level %>
-    <%= form.text_field :difficulty_level %>
-  </div>
+    <%= form.select :difficulty_level, Recipe::DIFFICULTY,{}, :class => "form-control" %>
+  </div><br>
 
-  <div class="field">
-    <%= form.label :food_type_id %>
-    <%= form.number_field :food_type_id %>
-  </div>
+  <div class="form-group"> <!--options to be sent to the database-->
+    <%= form.label :food_type %>
+    <%= form.select(:food_type_id, options_from_collection_for_select(FoodType.all, :id, :name), {:prompt => 'Please Choose'}, :class => "form control") %>
+  </div><br>
 
-  <div class="field">
-    <%= form.label :food_preference_id %>
-    <%= form.number_field :food_preference_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cuisine_id %>
-    <%= form.number_field :cuisine_id %>
-  </div>
+  <div class="form-group">
+    <%= form.label :food_preference %>
+    <%= form.select(:food_preference_id, options_from_collection_for_select(FoodPreference.all, :id, :name), {:prompt => 'Please Choose'}, :class => "form-control") %>
+  </div><br>
+  
+  
+  <div class="form-group">
+    <%= form.label :cuisine %>
+    <%= form.select(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :name), {:prompt => 'Please Choose'}, :class => "form control") %>
+  </div><br>
 
   <div class="field">
     <%= form.label :ingredients %>

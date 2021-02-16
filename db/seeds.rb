@@ -1,4 +1,4 @@
-#default data
+#default data for options to be sent to the database from the form
 food_types = ["Curry", "Dessert", "Sides", "Breakfast"]
 food_types.each{|d| FoodType.where(:name => d).first_or_create} #checks for record before adding it
 
