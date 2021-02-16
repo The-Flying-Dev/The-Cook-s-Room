@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    
+    <ul class="nav navbar-nav pull-right">
+      <% if user_signed_in? %>            <!-- checks to see if user is signed in and performs actions below-->
+      <li><%=link_to "#{current_user.email}" %></li>
+      <li class="active"><%= link_to "Logout", destroy_user_session_path %></li>
+      <% else %>
+      <li><%=link_to "Login", new_user_session_path %></li>
+      <li class="active"><%= link_to "Signup", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+
+
+    <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>
