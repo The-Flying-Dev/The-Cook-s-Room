@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FoodNation</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>FoodNation</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!--Bootstrap-->
+  <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-  <body>
-    
-    <ul class="nav navbar-nav pull-right">
-      <% if user_signed_in? %>            <!-- checks to see if user is signed in and performs actions below-->
-      <li><%=link_to "#{current_user.email}" %></li>
-      <li class="active"><%= link_to "Logout", destroy_user_session_path %></li>
-      <% else %>
-      <li><%=link_to "Login", new_user_session_path %></li>
-      <li class="active"><%= link_to "Signup", new_user_registration_path %></li>
-      <% end %>
-    </ul>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+</head>
+<body>
 
+  <!-- navbar -->
+  <div class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-    <%= yield %>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><%= image_tag "" %></a>
+      <div class="nav-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><%= link_to 'Recipes', recipes_path %></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <% if user_signed_in? %>
+            <li><%= link_to "#{current_user.email}" %></li>
+            <li class="active"><%= link_to "Logout", destroy_user_session_path %></li>
+          <% else %>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li class="active"><%= link_to "SignUp", new_user_registration_path %></li>
+          <% end %>
+        </ul>
+      </div> <!--/.nav-collapse -->
     </div>
-  </body>
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="panel panel-primary" id="panels">
+          <div class="panel-heading">Food Preferences
+          </div>
+          <% @food_preferences.each do |fp| %> 
+            <p><%= fp.name %></p>
+          <% end %>
+        </div>
+        <div class="panel panel-primary" id="panels">
+        <div class="panel-heading">Food Type
+        </div>
+        <% @food_types.each do |ft| %>
+          <p><%= ft.name %></p>
+        <% end %>
+      </div>
+      <div class="panel panel-primary" id="panels">
+      <div class="panel-heading">Cuisine
+      </div>
+      <% @cuisines.each do |c| %>
+        <p><%= c.name %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-lg-9">
+    <%= yield %>
+  </div>
+</div>
+
+</body>
+<footer> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</footer>
 </html>

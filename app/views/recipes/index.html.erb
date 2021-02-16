@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
+<h1>Listing recipes</h1>
 
-<h1>Recipes</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -23,16 +21,12 @@
         <td><%= recipe.title %></td>
         <td><%= recipe.cooking_time %></td>
         <td><%= recipe.difficulty_level %></td>
-        <td><%= recipe.food_type.name %></td>         <!--added association-->
-        <td><%= recipe.food_preference.name %></td>   <!--added association-->
-        <td><%= recipe.cuisine.name %></td>           <!--added association-->       
+        <td><%= recipe.food_type.name %></td>
+        <td><%= recipe.food_preference.name %></td>
+        <td><%= recipe.cuisine.name %></td>
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.procedure %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        
-        <!-- methods available to users that are signed in-->
+        <td><%= link_to 'Show', recipe, class: "btn btn-primary btn-small" %></td>
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-success btn-small" %></td>
           <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger ttn-small"  %></td>

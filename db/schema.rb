@@ -18,12 +18,6 @@ ActiveRecord::Schema.define(version: 2021_02_16_112936) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "foo_preferences", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "food_preferences", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
