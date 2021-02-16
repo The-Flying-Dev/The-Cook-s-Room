@@ -23,9 +23,9 @@
         <td><%= recipe.title %></td>
         <td><%= recipe.cooking_time %></td>
         <td><%= recipe.difficulty_level %></td>
-        <td><%= recipe.food_type_id %></td>
-        <td><%= recipe.food_preference_id %></td>
-        <td><%= recipe.cuisine_id %></td>
+        <td><%= recipe.food_type.name %></td>         <!--added association-->
+        <td><%= recipe.food_preference.name %></td>   <!--added association-->
+        <td><%= recipe.cuisine.name %></td>           <!--added association-->       
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.procedure %></td>
         <td><%= link_to 'Show', recipe %></td>
