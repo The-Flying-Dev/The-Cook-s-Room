@@ -26,10 +26,10 @@
         <td><%= recipe.cuisine.name %></td>
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.procedure %></td>
-        <td><%= link_to 'Show', recipe, class: "btn btn-primary btn-small" %></td>
+        <td><%= link_to 'Show', recipe, class: "btn btn-small" %></td>
         <% if user_signed_in? %>
-          <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-success btn-small" %></td>
-          <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger ttn-small"  %></td>
+          <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-small" %></td>
+          <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ttn-small"  %></td>
         <% end %>
       </tr>
     <% end %>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Recipe', new_recipe_path %>
+<%= link_to 'New Recipe', new_recipe_path, class: "recipe-link" %>

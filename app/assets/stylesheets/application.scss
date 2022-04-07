@@ -22,4 +22,80 @@
   .panel {
     text-align: center;
   }
+
+  .panel-primary {
+    border-color: rgb(223, 59, 0);
+
+    .panel-heading {
+      background-color: rgb(223, 59, 0);
+      border-color: rgb(223, 59, 0);
+      font-family: 'Karla', sans-serif;
+      font-weight: bold;
+    }
+
+    p {
+      font-family: 'Karla', sans-serif;
+      font-weight: bold;
+    }
+  }
+
+  #food_panel {
+    padding-left: 2vw;
+  }
+}
+
+table {
+  tbody {
+    tr {
+      td {        
+        .btn {
+          background-color: rgb(207, 196, 40);
+          color: antiquewhite;
+          font-family: 'Abril Fatface', cursive;
+          font-weight: 800;
+        }  
+        .btn:hover {
+          color: black;
+        }      
+      }
+    }
+  }
+}
+
+
+.recipe-link {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 800;
+  font-size: large;
+  text-decoration: none;
+  background-color: transparent;  
+ 
+}
+
+.recipe-link:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+}
+
+.page_links {
+  font-size: larger;
+  font-weight: 900;
+  text-decoration: none;
+  margin-left: 5vw;  
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  
+  a {
+    color: black;
+    
+    
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+  }
+
 }

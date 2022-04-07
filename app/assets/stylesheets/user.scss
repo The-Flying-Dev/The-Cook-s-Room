@@ -1,27 +1,5 @@
-// Place all the styles related to the recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.show-recipe {
-  margin-left: 3vw;  
-  p {
-    margin: 3vh 0;      
-    strong {
-      font-family: 'Oswald', sans-serif;
-      font-weight: bolder;
-      font-size: 3.5vh;      
-    }
-
-    span {
-      font-family: 'Karla', sans-serif;
-      font-size: 2.7vh;
-      font-weight: 500;
-    }
-  }
-}
-
-#recipe {
-  h1 {
+ 
+  h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 7vh;
     text-align: center;
@@ -34,14 +12,13 @@
 
     .field {
       margin: 2vh 0;
-      width: 25vw;
-
+      width: 18vw;
       label {
         font-family: 'Oswald', sans-serif;
         font-weight: 800;
       }
 
-      #recipe_title {
+      #user_email {
         width: 15vw;
         height: 6vh;
         border: black solid 2px;
@@ -49,33 +26,22 @@
         outline: none;
       }
 
-      #recipe_cooking_time {
+      #user_password {
         width: 15vw;
-        height: 15vh;
-        border: black solid 2px;
-        border-radius: 10px;
-        outline: none;
-      }      
-
-      #recipe_ingredients {
-        width: 15vw;
-        height: 15vh;
+        height: 6vh;
         border: black solid 2px;
         border-radius: 10px;
         outline: none;
       }
 
-      #recipe_procedure {
+      #user_password_confirmation {
         width: 15vw;
-        height: 15vh;
+        height: 6vh;
         border: black solid 2px;
         border-radius: 10px;
         outline: none;
       }
-      
-
     }
-
     .actions {
       width: 18vw;
       
@@ -85,11 +51,33 @@
         border: solid rgb(223, 59, 0);
         color: black;      
         font-weight: bold;      
-        width: 10vw;
+        width: 7vw;
         height: 7vh;      
+        text-align: center;
+        
+      }
+
+      input, textarea {      
         text-align: center;
         
       }
     }
   }
-} 
+
+  .shared-links {
+
+    a {          
+      font-family: 'Abril Fatface';
+      text-decoration: none;          
+      color: rgb(0, 0, 0);
+      background-color: transparent; 
+      font-size: 3vh;
+      font-weight: 700;           
+    }  
+    
+    a:hover {
+      text-decoration: none;
+      background-color: transparent;
+      color: black;
+    }
+  }
