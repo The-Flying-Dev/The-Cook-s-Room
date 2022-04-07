@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
-    before_action :set_recipe, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_recipe, only: [ :show, :edit, :update, :destroy ]
  
 
     def index
@@ -72,7 +72,7 @@ class RecipesController < ApplicationController
   
       # For parameters only allow the white list through.
       def recipe_params
-        #params.require(:recipe).permit(:title, :cooking_time, :difficulty_level, :food_type_id, :food_preference_id, :cuisine_id, :ingredients, :procedure)
-        params.require(:recipe).permit(:title)
+        params.require(:recipe).permit(:title, :cooking_time, :difficulty_level, :food_type_id, :food_preference_id, :cuisine_id, :ingredients, :procedure)
+        #params.require(:recipe).permit(:title)
       end
 end
