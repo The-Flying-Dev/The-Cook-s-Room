@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .show-recipe {
-  margin-left: 3vw;  
+  margin-left: 3vw; 
+
   p {
     margin: 3vh 0;      
     strong {
@@ -20,17 +21,17 @@
   }
 }
 
-#recipe {
   h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 7vh;
     text-align: center;
+   
   }
 
   form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 
     .field {
       margin: 2vh 0;
@@ -39,10 +40,11 @@
       label {
         font-family: 'Oswald', sans-serif;
         font-weight: 800;
+        display:flex;
       }
 
       #recipe_title {
-        width: 15vw;
+        width: 18vw;
         height: 6vh;
         border: black solid 2px;
         border-radius: 10px;
@@ -50,7 +52,7 @@
       }
 
       #recipe_cooking_time {
-        width: 15vw;
+        width: 18vw;
         height: 15vh;
         border: black solid 2px;
         border-radius: 10px;
@@ -58,7 +60,7 @@
       }      
 
       #recipe_ingredients {
-        width: 15vw;
+        width: 18vw;
         height: 15vh;
         border: black solid 2px;
         border-radius: 10px;
@@ -66,14 +68,60 @@
       }
 
       #recipe_procedure {
-        width: 15vw;
+        width: 18vw;
         height: 15vh;
         border: black solid 2px;
         border-radius: 10px;
         outline: none;
-      }
-      
+      }      
 
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2vh 0;
+      width: 25vw;
+
+      label {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 800;
+        
+      }
+
+
+      #recipe_difficulty_level {
+        width: 18vw;
+        height: 5vh;
+        border: black solid 2px;
+        border-radius: 10px;
+        outline: none;
+      }
+
+      #recipe_food_type_id {
+        width: 18vw;
+        height: 5vh;
+        border: black solid 2px;
+        border-radius: 10px;
+        outline: none;
+      }
+
+      #recipe_food_preference_id {
+        width: 18vw;
+        height: 5vh;
+        border: black solid 2px;
+        border-radius: 10px;
+        outline: none;
+      }
+
+      #recipe_cuisine_id {
+        width: 18vw;
+        height: 5vh;
+        border: black solid 2px;
+        border-radius: 10px;
+        outline: none;
+      }
     }
 
     .actions {
@@ -85,11 +133,25 @@
         border: solid rgb(223, 59, 0);
         color: black;      
         font-weight: bold;      
-        width: 10vw;
+        width: 12vw;
         height: 7vh;      
         text-align: center;
         
       }
     }
   }
-} 
+
+  a {          
+    font-family: 'Abril Fatface';
+    text-decoration: none;          
+    color: rgb(0, 0, 0);
+    background-color: transparent; 
+    font-size: 3vh;
+    font-weight: 700;           
+  }  
+  
+  a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+  }

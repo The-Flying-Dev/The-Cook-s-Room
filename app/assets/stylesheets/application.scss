@@ -15,8 +15,8 @@
  */
 
  body {
-   width: 100vw;
-   overflow: visible;
+   width: 100vw;   
+   overflow: scroll;
  
 
   .panel {
@@ -42,17 +42,41 @@
   #food_panel {
     padding-left: 2vw;
   }
-}
+
+  .row {
+
+    #recipe {
+
+      h1 {
+        font-size: 9vh;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 15vh;
+      }
+    }
+
+  }
 
 table {
+  thead {
+    tr {
+      th {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 900;
+      }
+    }
+  }
   tbody {
     tr {
-      td {        
+      td { 
+        
+        font-family: 'Karla', sans-serif;
+        font-weight: 600;
+
         .btn {
           background-color: rgb(207, 196, 40);
           color: antiquewhite;
           font-family: 'Abril Fatface', cursive;
-          font-weight: 800;
+          font-weight: 900;
         }  
         .btn:hover {
           color: black;
@@ -69,6 +93,7 @@ table {
   font-size: large;
   text-decoration: none;
   background-color: transparent;  
+  color: black;  
  
 }
 
@@ -84,12 +109,10 @@ table {
   text-decoration: none;
   margin-left: 5vw;  
   margin-top: 15vh;
-  margin-bottom: 10vh;
+  margin-bottom: 10vh;  
   
   a {
-    color: black;
-    
-    
+    color: black; 
   }
 
   a:hover {
@@ -98,4 +121,5 @@ table {
     background-color: transparent;
   }
 
+  }
 }
