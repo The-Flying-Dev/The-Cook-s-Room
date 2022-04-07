@@ -1,0 +1,24 @@
+<div class="col-lg-2">
+
+  <div class="panel panel-primary" id="panels">
+    <div class="panel-heading">Food Preferences</div>          
+      <% FoodPreference.all.each do |fp| %> 
+        <p><%= fp.name %></p>
+      <% end %>
+  </div>
+
+  <div class="panel panel-primary" id="panels">
+    <div class="panel-heading">Food Type</div>
+      <%  FoodType.all.each do |ft| %>
+        <p><%= ft.name %></p>
+      <% end %>
+  </div>
+
+  <div class="panel panel-primary" id="panels">
+    <div class="panel-heading">Cuisine</div>
+      <% Cuisine.all.each do |c| %>
+          <p><%= c.name %></p>
+      <% end %>
+    </div>
+
+</div>

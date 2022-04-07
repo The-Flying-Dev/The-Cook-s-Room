@@ -1,0 +1,25 @@
+<!-- navbar -->
+<nav class="navbar">
+
+  <div class="navbar-links">
+      
+    <ul>
+      <li class="home-link"><%= link_to "The Cook's Room", recipes_path %></li>
+    
+
+      <% if user_signed_in? %>        
+        <li class="devise-links"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <li class="devise-links" id="email"><%= link_to "#{current_user.email}" %></li>
+
+      <% else %>
+
+        <li class="devise-links"><%= link_to "Login", new_user_session_path %></li>
+        <li class="devise-links"><%= link_to "SignUp", new_user_registration_path %></li>
+
+      <% end %>
+
+    </ul>
+
+  </div>
+
+</nav>

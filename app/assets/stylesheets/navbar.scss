@@ -1,0 +1,46 @@
+.navbar {
+  width: 100vw;
+  height: 15vh;  
+  margin-top: 0;   
+  
+
+  .navbar-links {
+    line-height: 11vh; 
+
+    ul {
+      line-height: 2em;  
+      padding: 2vh 2vw;
+      margin-right: 3vw; 
+      list-style-type: none;
+    
+      .home-link {
+        font-size: 5vh;
+      }
+
+      li {
+        float: left;
+        padding: 1vh 1vw;               
+
+        a {          
+          font-family: 'Abril Fatface';
+          text-decoration: none;          
+          color: rgb(223, 59, 0);
+          background-color: transparent; 
+          font-weight: 700;         
+        }   
+      }  
+
+      .devise-links {
+        float: right;  
+
+        a {
+          font-size: 3vh; 
+          color: rgb(78, 77, 77);
+          font-weight: 400; 
+        }   
+       
+      }      
+     
+    } 
+  }
+}
