@@ -27,9 +27,11 @@
         <td><%= truncate(strip_tags(recipe.ingredients), length: 25) %></td>
         <td><%= truncate(strip_tags(recipe.procedure), length: 25) %></td>
         <td><%= link_to 'Show', recipe, class: "btn btn-small" %></td>
-        <% if user_signed_in? %>
+        <% if user_signed_in? %>          
           <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-small" %></td>
-          <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ttn-small"  %></td>
+          <% if recipe.user == current_user %>
+            <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ttn-small"  %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>
