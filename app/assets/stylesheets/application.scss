@@ -17,6 +17,7 @@
  body {
    width: 100vw;   
    overflow: scroll;
+   background-color: rgb(17, 245, 245);
  
 
   .panel {
@@ -45,7 +46,10 @@
 
   .row {
 
-    #recipe {
+      margin-left: 0;
+      margin-right: 0;
+
+    #recipe {      
 
       h1 {
         font-size: 9vh;

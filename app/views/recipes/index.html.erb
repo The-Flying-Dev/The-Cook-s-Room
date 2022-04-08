@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Cooking time</th>
+      <th>Cooking time (mins)</th>
       <th>Difficulty level</th>
       <th>Food type</th>
       <th>Food preference</th>
@@ -24,8 +24,8 @@
         <td><%= recipe.food_type.name %></td>
         <td><%= recipe.food_preference.name %></td>
         <td><%= recipe.cuisine.name %></td>
-        <td><%= recipe.ingredients %></td>
-        <td><%= recipe.procedure %></td>
+        <td><%= truncate(strip_tags(recipe.ingredients), length: 25) %></td>
+        <td><%= truncate(strip_tags(recipe.procedure), length: 25) %></td>
         <td><%= link_to 'Show', recipe, class: "btn btn-small" %></td>
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-small" %></td>

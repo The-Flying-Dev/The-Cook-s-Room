@@ -45,14 +45,15 @@
     }
     .actions {
       width: 18vw;
-      
+      margin-top: 5vh;
+
       input[type="submit"] {           
         background-color: rgb(223, 59, 0);
         border-radius: 0.354em;
         border: solid rgb(223, 59, 0);
         color: black;      
         font-weight: bold;      
-        width: 9vw;
+        width: 15vw;
         height: 7vh;      
         text-align: center;
         
