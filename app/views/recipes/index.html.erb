@@ -16,7 +16,7 @@
   </thead>
 
   <tbody>
-    <%= will_paginate @recipes %> 
+    
       <% @recipes.each do |recipe| %>
         <tr>
           <td><%= recipe.title %></td>
@@ -34,12 +34,12 @@
               <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ttn-small"  %></td>
             <% end %>
           <% end %>
-        </tr>
-      <% end %>
-    <%= will_paginate @recipes %>
+        </tr>       
+      <% end %>    
   </tbody>
+  
 </table>
-
+<%= will_paginate @recipes %>
 <br>
 
 <%= link_to 'New Recipe', new_recipe_path, class: "recipe-link" %>
