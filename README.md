@@ -1,24 +1,7 @@
-# README
+# The Cooks Room
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h3>A Recipe sharing platform</h3>
 
-Things you may want to cover:
+* User's can log in, log out, create, edit, update and delete entries that they posted.
+* User's will only be able to delete entries they created.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
