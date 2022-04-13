@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
  
 
     def index
-      @recipes = Recipe.all
+      @recipes = Recipe.paginate(:page => params[:page], :per_page=>5)
       @food_preferences = FoodPreference.all
       @food_types = FoodType.all
       @cuisines = Cuisine.all

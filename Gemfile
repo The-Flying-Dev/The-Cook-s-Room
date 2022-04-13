@@ -12,7 +12,9 @@ gem 'duktape'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+
 gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 
 
 # Use ActiveStorage variant

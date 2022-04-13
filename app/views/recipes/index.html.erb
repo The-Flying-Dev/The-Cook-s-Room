@@ -16,25 +16,27 @@
   </thead>
 
   <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.title %></td>
-        <td><%= recipe.cooking_time %></td>
-        <td><%= recipe.difficulty_level %></td>
-        <td><%= recipe.food_type.name %></td>
-        <td><%= recipe.food_preference.name %></td>
-        <td><%= recipe.cuisine.name %></td>
-        <td><%= truncate(strip_tags(recipe.ingredients), length: 25) %></td>
-        <td><%= truncate(strip_tags(recipe.procedure), length: 25) %></td>
-        <td><%= link_to 'Show', recipe, class: "btn btn-small" %></td>
-        <% if user_signed_in? %>          
-          <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-small" %></td>
-          <% if recipe.user == current_user %>
-            <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ttn-small"  %></td>
+    <%= will_paginate @recipes %> 
+      <% @recipes.each do |recipe| %>
+        <tr>
+          <td><%= recipe.title %></td>
+          <td><%= recipe.cooking_time %></td>
+          <td><%= recipe.difficulty_level %></td>
+          <td><%= recipe.food_type.name %></td>
+          <td><%= recipe.food_preference.name %></td>
+          <td><%= recipe.cuisine.name %></td>
+          <td><%= truncate(strip_tags(recipe.ingredients), length: 25) %></td>
+          <td><%= truncate(strip_tags(recipe.procedure), length: 25) %></td>
+          <td><%= link_to 'Show', recipe, class: "btn btn-small" %></td>
+          <% if user_signed_in? %>          
+            <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-small" %></td>
+            <% if recipe.user == current_user %>
+              <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ttn-small"  %></td>
+            <% end %>
           <% end %>
-        <% end %>
-      </tr>
-    <% end %>
+        </tr>
+      <% end %>
+    <%= will_paginate @recipes %>
   </tbody>
 </table>
 
